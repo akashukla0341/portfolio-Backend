@@ -53,6 +53,10 @@ export const logout = async (req, res) => {
   }
 };
 
+export const serverStart = async(req,res) => {
+  res.send("portfolio Api")
+}
+
 export const getUser = async (req, res) => {
   try {
     const user = await User.findOne().select("-password -email");

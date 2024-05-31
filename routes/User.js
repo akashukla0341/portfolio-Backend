@@ -10,11 +10,13 @@ import {
   addProject,
   deleteTimeline,
   deleteProject,
+  serverStart,
 } from "../controller/User.js";
 import { isAuthenticated } from "../middlewares/auth.js";
 export const userRouter = express.Router();
 
 userRouter.route("/login").post(login);
+userRouter.route("/").get(serverStart);
 
 userRouter.route("/logout").get(logout);
 
