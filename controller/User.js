@@ -57,6 +57,7 @@ export const getUser = async (req, res) => {
   try {
     const user = await User.findOne().select("-password -email");
 
+
     res.status(200).json({
       success: true,
       user,
