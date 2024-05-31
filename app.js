@@ -16,7 +16,7 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use("/api/v1", userRouter);
+app.use("/", userRouter);
 
 // app.use(express.static(path.resolve("./frontend/build")));
 
