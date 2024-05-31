@@ -1,5 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import { userRouter } from "./routes/User.js";
 import path from "path";
 import cors from 'cors'
 import { configDotenv } from "dotenv";
@@ -15,7 +16,6 @@ app.use(cors({
   credentials: true,
 }));
 
-import { userRouter } from "./routes/User.js";
 app.use("/api/v1", userRouter);
 
 // app.use(express.static(path.resolve("./frontend/build")));
